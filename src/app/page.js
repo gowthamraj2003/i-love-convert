@@ -58,17 +58,65 @@ export default function Home() {
   ];
 
   return (
-    <div style={{ padding: "4rem 0" }}>
+    <div style={{ padding: "0 0 1.5rem 0" }}>
       {/* Hero Section */}
-      <section className="container text-center" style={{ marginBottom: "4rem" }}>
-        <h1 className="h1-hero animate-slide-up" style={{ margin: "0 auto 1.5rem auto", maxWidth: "800px" }}>
-          The Ultimate Hub of <span>50+ Free Web Tools</span>
-        </h1>
-        <p className="subtitle animate-slide-up" style={{ margin: "0 auto 2.5rem auto" }}>
-          Convert images, secure PDFs, format code, design color palettes, and encode datasets. Safe, fast, and 100% processed in your browser.
-        </p>
-        <div className="animate-slide-up" style={{ animationDelay: "0.1s" }}>
-          <SearchTools />
+      <section className="hero-section text-center">
+        {/* Glowing Ambient Background Orbs */}
+        <div className="hero-glow-container">
+          <div className="hero-glow-1"></div>
+          <div className="hero-glow-2"></div>
+        </div>
+
+        <div className="container hero-content">
+          {/* Accent Pill Badge */}
+          <div className="hero-badge animate-slide-up">
+            <span></span> 100% Free & Browser-Based Utilities
+          </div>
+
+          <h1 className="h1-hero animate-slide-up" style={{ margin: "0 auto 1.5rem auto", maxWidth: "900px" }}>
+            The Ultimate Hub of <br /><span>50+ Free Web Tools</span>
+          </h1>
+
+          <p className="subtitle animate-slide-up" style={{ margin: "0 auto 2.5rem auto" }}>
+            Convert images, secure PDFs, format code, design color palettes, and encode datasets.
+            Safe, fast, and 100% processed directly inside your browser cache.
+          </p>
+
+          <div className="animate-slide-up" style={{ animationDelay: "0.1s" }}>
+            <SearchTools />
+          </div>
+
+          {/* Quick links / Popular searches */}
+          <div className="hero-quick-links animate-slide-up" style={{ animationDelay: "0.15s" }}>
+            <span className="hero-quick-links-label">Popular:</span>
+            <Link href="/tools/image-tools/jpg-to-png/" className="hero-quick-link-item">JPG to PNG</Link>
+            <Link href="/tools/document-tools/merge-pdf/" className="hero-quick-link-item">Merge PDF</Link>
+            <Link href="/tools/developer-tools/json-formatter/" className="hero-quick-link-item">JSON Formatter</Link>
+            <Link href="/tools/web-tools/qr-code-generator/" className="hero-quick-link-item">QR Generator</Link>
+            <Link href="/tools/image-tools/image-compressor/" className="hero-quick-link-item">Compress Image</Link>
+          </div>
+
+          {/* Feature highlights */}
+          <div className="hero-features animate-slide-up" style={{ animationDelay: "0.2s" }}>
+            <div className="hero-feature-item">
+              <div className="hero-feature-icon">
+                <Zap size={18} />
+              </div>
+              <span>Client-Side Speed</span>
+            </div>
+            <div className="hero-feature-item">
+              <div className="hero-feature-icon">
+                <ShieldCheck size={18} />
+              </div>
+              <span>100% Secure & Private</span>
+            </div>
+            <div className="hero-feature-item">
+              <div className="hero-feature-icon">
+                <Sparkles size={18} />
+              </div>
+              <span>Zero Limits & Free</span>
+            </div>
+          </div>
         </div>
       </section>
 
