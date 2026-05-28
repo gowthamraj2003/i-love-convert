@@ -9,10 +9,7 @@ export default function Footer() {
         <div className="footer-grid">
           {/* Logo & About Column */}
           <div className="footer-info">
-            <Link href="/" className="logo">
-              <Wrench size={24} color="var(--accent-primary)" />
-              ILove<span>Convert</span>
-            </Link>
+            <Link href="/" className="logo"><Wrench size={24} color="var(--accent-primary)" />ILove<span>Convert</span></Link>
             <p>
               Your ultra-fast, premium client-side multi-tools platform. Convert, format, edit, compress, and analyze text, images, and documents securely inside your browser.
             </p>

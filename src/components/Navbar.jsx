@@ -40,10 +40,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="container nav-container">
         {/* Logo */}
-        <Link href="/" className="logo">
-          <Wrench size={26} color="var(--accent-primary)" />
-          ILove<span>Convert</span>
-        </Link>
+        <Link href="/" className="logo"><Wrench size={26} color="var(--accent-primary)" />ILove<span>Convert</span></Link>
 
         {/* Desktop Links */}
         <div className="nav-links">
@@ -172,10 +169,7 @@ export default function Navbar() {
       />
       <div className={`sidebar ${mobileMenuOpen ? "open" : ""}`}>
         <div className="sidebar-header">
-          <span className="logo" style={{ fontSize: "1.2rem" }}>
-            <Wrench size={22} color="var(--accent-primary)" />
-            ILove<span>Convert</span>
-          </span>
+          <span className="logo" style={{ fontSize: "1.2rem" }}><Wrench size={22} color="var(--accent-primary)" />ILove<span>Convert</span></span>
           <button 
             onClick={toggleMobileMenu}
             style={{ background: "none", border: "none", cursor: "pointer", color: "var(--text-primary)" }}
