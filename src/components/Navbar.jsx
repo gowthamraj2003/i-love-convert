@@ -145,13 +145,7 @@ export default function Navbar() {
           <button 
             className="mobile-toggle" 
             onClick={toggleMobileMenu}
-            style={{
-              display: "none",
-              background: "none",
-              border: "none",
-              cursor: "pointer",
-              color: "var(--text-primary)"
-            }}
+            aria-label="Open mobile menu"
           >
             <Menu size={24} />
           </button>
@@ -163,9 +157,6 @@ export default function Navbar() {
         @media (max-width: 768px) {
           .nav-links {
             display: none !important;
-          }
-          .mobile-toggle {
-            display: block !important;
           }
         }
         .dropdown-item:hover {
