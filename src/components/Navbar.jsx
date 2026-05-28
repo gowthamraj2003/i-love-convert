@@ -5,13 +5,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTheme } from "../hooks/useTheme";
 import { categories } from "../data/tools";
-import { 
-  Sun, 
-  Moon, 
-  Menu, 
-  X, 
-  Search, 
-  ChevronDown, 
+import {
+  Sun,
+  Moon,
+  Menu,
+  X,
+  Search,
+  ChevronDown,
   Heart,
   Wrench
 } from "lucide-react";
@@ -40,26 +40,26 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="container nav-container">
         {/* Logo */}
-        <Link href="/" className="logo"><Wrench size={26} color="var(--accent-primary)" />ILove<span>Convert</span></Link>
+        <Link href="/" className="logo"><Wrench size={26} color="var(--accent-primary)" /><span className="logo-text">ILove<span className="logo-accent">Convert</span></span></Link>
 
         {/* Desktop Links */}
         <div className="nav-links">
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className={`nav-link ${pathname === "/" ? "active" : ""}`}
           >
             Home
           </Link>
 
           {/* Categories Dropdown */}
-          <div 
-            className="dropdown-wrapper" 
+          <div
+            className="dropdown-wrapper"
             style={{ position: "relative" }}
             onMouseEnter={() => setDropdownOpen(true)}
             onMouseLeave={() => setDropdownOpen(false)}
           >
-            <button 
-              className="nav-link dropdown-toggle" 
+            <button
+              className="nav-link dropdown-toggle"
               onClick={toggleDropdown}
               style={{
                 background: "none",
@@ -72,9 +72,9 @@ export default function Navbar() {
             >
               Categories <ChevronDown size={16} />
             </button>
-            
+
             {dropdownOpen && (
-              <div 
+              <div
                 className="dropdown-menu animate-fade-in"
                 style={{
                   position: "absolute",
@@ -112,16 +112,16 @@ export default function Navbar() {
             )}
           </div>
 
-          <Link 
-            href="/favorites/" 
+          <Link
+            href="/favorites/"
             className={`nav-link ${pathname === "/favorites/" ? "active" : ""}`}
             style={{ display: "flex", alignItems: "center", gap: "0.25rem" }}
           >
             <Heart size={16} /> Favorites
           </Link>
 
-          <Link 
-            href="/about/" 
+          <Link
+            href="/about/"
             className={`nav-link ${pathname === "/about/" ? "active" : ""}`}
           >
             About
@@ -129,9 +129,9 @@ export default function Navbar() {
 
           {/* Theme Toggle */}
           {mounted && (
-            <button 
-              onClick={toggleTheme} 
-              className="theme-toggle-btn" 
+            <button
+              onClick={toggleTheme}
+              className="theme-toggle-btn"
               aria-label="Toggle theme"
             >
               {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
@@ -139,8 +139,8 @@ export default function Navbar() {
           )}
 
           {/* Mobile Menu Icon */}
-          <button 
-            className="mobile-toggle" 
+          <button
+            className="mobile-toggle"
             onClick={toggleMobileMenu}
             aria-label="Open mobile menu"
           >
@@ -163,14 +163,14 @@ export default function Navbar() {
       `}</style>
 
       {/* Mobile Drawer Navigation */}
-      <div 
+      <div
         className={`mobile-menu-overlay ${mobileMenuOpen ? "open" : ""}`}
         onClick={toggleMobileMenu}
       />
       <div className={`sidebar ${mobileMenuOpen ? "open" : ""}`}>
         <div className="sidebar-header">
-          <span className="logo" style={{ fontSize: "1.2rem" }}><Wrench size={22} color="var(--accent-primary)" />ILove<span>Convert</span></span>
-          <button 
+          <span className="logo" style={{ fontSize: "1.2rem" }}><Wrench size={22} color="var(--accent-primary)" /><span className="logo-text">ILove<span className="logo-accent">Convert</span></span></span>
+          <button
             onClick={toggleMobileMenu}
             style={{ background: "none", border: "none", cursor: "pointer", color: "var(--text-primary)" }}
           >
@@ -180,7 +180,7 @@ export default function Navbar() {
 
         <div className="sidebar-nav">
           <Link href="/" className="sidebar-link">Home</Link>
-          
+
           <div style={{ padding: "0.5rem 0" }}>
             <p style={{ fontSize: "0.85rem", fontWeight: "700", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: "0.5rem" }}>
               Categories
@@ -204,9 +204,9 @@ export default function Navbar() {
         <div style={{ marginTop: "auto", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <span>Dark Mode</span>
           {mounted && (
-            <button 
-              onClick={toggleTheme} 
-              className="theme-toggle-btn" 
+            <button
+              onClick={toggleTheme}
+              className="theme-toggle-btn"
               style={{ width: "44px", height: "44px" }}
             >
               {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
@@ -214,6 +214,6 @@ export default function Navbar() {
           )}
         </div>
       </div>
-    </nav>
+    </nav >
   );
 }

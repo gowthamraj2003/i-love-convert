@@ -158,7 +158,7 @@ a {
   letter-spacing: -1px;
 }
 
-.logo span {
+.logo-accent {
   background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
